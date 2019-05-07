@@ -15,9 +15,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "dist")));
 
 app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+  console.log(`server listening on port ${PORT}`);
 });
