@@ -4,11 +4,10 @@
   "description": "Markdown Previewer",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "build:dev": "webpack --progress --watch --verbose --bail",
+    "build": "webpack --config webpack.prod.js",
     "serve": "node server.js",
-    "start": "npm-run-all --parallel build serve",
-    "start:dev": "webpack-dev-server --progress --hot"
+    "start": "npm run build && npm run serve",
+    "start:dev": "webpack-dev-server --config webpack.dev.js --progress --hot"
   },
   "repository": {
     "type": "git",
