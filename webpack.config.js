@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -34,6 +35,7 @@ module.exports = {
     stats: "errors-only",
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     })
