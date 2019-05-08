@@ -68,7 +68,7 @@ class App extends Component {
 
   renderEditor() {
     return (
-      <textarea id="editor" value={this.state.text} onChange={this.handleEditorChange}></textarea>
+      <textarea id="editor" spellCheck={false} value={this.state.text} onChange={this.handleEditorChange}></textarea>
     );
   }
 
