@@ -27,10 +27,15 @@ module.exports = {
         include: path.join(__dirname, "src"),
         exclude: /node_modules/,
         use: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        use: [ "style-loader", "css-loader" ]
       }
     ]
   },
   devServer: {
+    clientLogLevel: "error",
     contentBase: path.join(__dirname, "dist"),
     open: true,
     port: PORT,
