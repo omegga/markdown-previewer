@@ -3,7 +3,7 @@ import marked from "marked";
 
 marked.setOptions({
   breaks: true
-})
+});
 const exampleText = `
 # Welcome to my React Markdown Previewer!
 
@@ -85,7 +85,7 @@ class App extends Component {
         { this.renderEditor() }
         { this.renderPreview() }
       </div>
-    )
+    );
   }
 }
 
