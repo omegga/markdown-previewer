@@ -6,3 +6,20 @@ h1 {
   text-align: center;
   color: black;
 }
+
+#editor,
+#preview {
+  border: 1px solid black;
+  display: inline-block;
+  font-size: 0.6vw;
+  margin: 15px;
+  min-height: 500px;
+  padding: 10px;
+  vertical-align: top;
+  width: 44%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
