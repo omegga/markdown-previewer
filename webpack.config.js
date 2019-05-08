@@ -11,7 +11,7 @@ if (!PORT) {
 
 module.exports = {
   mode: "development",
-  devtool: "inline-source-map",
+  devtool: "cheap-module-eval-source-map",
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "dist"),
@@ -24,6 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        include: path.join(__dirname, "src"),
         exclude: /node_modules/,
         use: "babel-loader"
       }
